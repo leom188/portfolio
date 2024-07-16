@@ -1,0 +1,42 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "May 2023 - May 2024",
+    title: "Peer Technology Asistant - Bow Valley College",
+    company: "Bow Valley College",
+    description:
+      " Provide educational technology support to Bow Valley College students and staff.",
+      link: '#'
+  },
+  {
+    date: "December 2021 - December 2022",
+    title: "Business Solutions Analyst - Scotiabank GBS",
+    description:
+      "Facilitate Working sessions. Interpret client needs, assess requirements and identify solutions. Document requirements and create user stories.",
+  },
+  {
+    date: "February 2020 - December 2021",
+    title: "Data Governance Analyst - Banco de Bogotá",
+    description:
+      "Get started with dozens of web components and interactive elements built on top of Tailwind CSS.",
+  },
+  {
+    date: "December 2013 - January 2020",
+    title: "Business Analyst - Banco de Bogotá",
+    description:
+      "As a Business Analyst, I collaborated with stakeholders to gather and document requirements and user stories, ensuring alignment with business goals. I prepared reports for Corporate Sales Advisors, successfully reducing the report generation time from one week to two hours by leveraging advanced Excel techniques, significantly improving operational efficiency. Additionally, I documented and improved processes to enhance productivity and operational effectiveness. I also provided training and support to team members, fostering a collaborative work environment.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
