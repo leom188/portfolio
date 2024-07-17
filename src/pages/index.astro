@@ -11,6 +11,9 @@ import MailIcon from "../icons/Mail.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
+import ProfileCheckIcon from "@/icons/ProfileCheck.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout
@@ -18,61 +21,36 @@ import Projects from "../components/Projects.astro";
   description="Hire Leonardo to create your web or mobile application. Web Developer"
 >
   <main class="px-4">
-    <SectionContainer class="py-44 pb-32">
-      <img
-        class="rounded-full size-12 mb-4"
-        src="https://www.instagram.com/p/ByLWLSQgcUhOlqHA5kJofB9yZHimJABjMHzeLg0/"
-        alt="Me"
-      />
-      <h1
-        class="flex flex-row items-center text-white text-3xl md:text-4xl lg:text-5xl font-bold gap-x-4 pb-6 lg:pb-10"
-      >
-        Hey, I'm Leonardo <a 
-          href="https://www.linkedin.com/in/leomoncadac/"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center"
-          >
-
-          <Badge>Open to work</Badge>
-        </a>
-      </h1>
-
-      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-        <span>9+ years of Experience</span> as BA and Data Governance Analyst. Software
-        Developer junior. Based in <span class="text-red-200/90"
-          >Calgary, Canada</span
-        > 🍁. I'm passionate about responsive web development and data analysis.
-      </h2>
-      <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialPill href="https://www.linkedin.com/in/leomoncadac/">
-          <LinkedInIcon class="size-4 md:size-6" />LinkedIn
-        </SocialPill>
-        <SocialPill href="https://github.com/leom188">
-          <GitHubIcon class="size-4 md:size-6" />GitHub
-        </SocialPill>
-        <SocialPill href="mailto:lmoncadac1@gmail.com">
-          <MailIcon class="size-4 md:size-6" />lmoncadac1@gmail.com
-        </SocialPill>
-      </nav>
+    <SectionContainer class="py-16 md:py-36" id="home">
+      <Hero />
     </SectionContainer>
 
-    <SectionContainer id="experience">
-      <h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
-        <BriefcaseIcon class="size-6" />
-        Work Experince
-      </h2>
-      <Experience />
-    </SectionContainer>
+    <div class="space-y-24">
+      <SectionContainer id="experience">
+        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black-80 dark:text-white">
+          <BriefcaseIcon class="size-6" />
+          Work Experince
+        </h2>
+        <Experience />
+      </SectionContainer>
 
-    <SectionContainer id="projects">
-      <h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
-        <CodeIcon class="size-6" />
-        Projects
-      </h2>
-      <Projects />
-    </SectionContainer>
+      <SectionContainer id="projects">
+        <h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
+          <CodeIcon class="size-6" />
+          Projects
+        </h2>
+        <Projects />
+      </SectionContainer>
 
-    <section class="w-full mx-auto lg:w-[740px]"></section>
+      <SectionContainer id="about">
+        <h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
+          <ProfileCheckIcon class="size-6" />
+          About Me
+        </h2>
+        <AboutMe />
+      </SectionContainer>
+
+      <section class="w-full mx-auto lg:w-[740px]"></section>
+    </div>
   </main>
 </Layout>
