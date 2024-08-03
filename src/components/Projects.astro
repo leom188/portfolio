@@ -1,7 +1,10 @@
 ---
 import GitHub from "../icons/GitHub.astro"
 import NextJS from "../icons/NextJS.astro"
+import React from "../icons/React.astro"
 import Tailwind from "../icons/Tailwind.astro"
+import PowerBI from "../icons/PowerBI.astro"
+import Sql from "../icons/Sql.astro"
 import Link from "../icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
@@ -16,24 +19,40 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  POWERBI: {
+    name: "Power BI",
+    class: "bg-[#003159] text-white",
+    icon: PowerBI,
+  },
+  SQL: {
+    name: "SQL",
+    class: "bg-[#003159] text-white",
+    icon: Sql,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#003159] text-white",
+    icon: React,
+  },
 }
 const PROJECTS = [
   {
-    title: "GeminiAI Chatbot",
+    title: "Power BI E-Bike Sharing Report",
     description:
-      "Chatbot using the google GeminiAI API. Created with React and Node.js.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/leom188/GeminiChat",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Power BI report showing sales from an e-bike sharing mobility service. Created using Power BI desktop and published to Power BI service. The report is embedded in this website. The data source was prepared in SQL Server Management Studio.",
+    link: "https://app.powerbi.com/reportEmbed?reportId=18d4ff5f-a9e9-4b2f-a7c6-25a921da2c6d&autoAuth=true&ctid=8f11c6f4-648e-4c0c-bb99-96e8408a8e2a",
+    //github: "https://github.com/leom188/GeminiChat",
+    image: "/projects/BikeBI.webp",
+    tags: [TAGS.POWERBI, TAGS.SQL],
   },
   {
-    title: "Under Construction",
+    title: "GeminiAI Chatbot",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Under Construction - chat bot using the the GeminiAI Api from google. Using React.",
+    //link: "https://adventjs.dev",
+    github: "https://github.com/leom188/GeminiChat",
+    image: "/projects/GeminiChat.webp",
+    tags: [TAGS.REACT],
   },
 ]
 ---
